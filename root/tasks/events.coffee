@@ -14,6 +14,7 @@ module.exports = (grunt) ->
       when "coffee"
         if action isnt "deleted"
           if !grunt.file.isDir(filepath)
+            grunt.config ["coffeelint", "dev"], [filepath]
             grunt.config ["coffee", "dev", "src"], filepath.replace(grunt.config.get('coffee.dev.cwd') + '/', '')
           else
             grunt.config ["coffee", "dev", "src"], '!skip'

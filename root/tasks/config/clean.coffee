@@ -10,6 +10,7 @@ module.exports = (grunt) ->
     "<%= grunt.settings.paths.tempDir %>",
     "<%= grunt.settings.paths.buildDir %>"
   ]
-  server: [
+
+  dev: [
     "<%= grunt.settings.paths.tempDir %>"
   ]

@@ -7,5 +7,9 @@ module.exports = (grunt) ->
     expand: true
     dot: true
     cwd: '<%= grunt.settings.paths.basePath %>'
-    src: ['**/*.{jsp,js,css,woff,ttf,svg,jpeg,jpg,tmpl}', 'CNAME', '!**/vendor/bower_components/**/*']
+    src: [
+      '**/*'
+      '!{vendor,_*}/**/*'
+      '!**/*.{coffee,scss,sass,feature,md}'
+    ]
     dest: '<%= grunt.settings.paths.tempDir %>'

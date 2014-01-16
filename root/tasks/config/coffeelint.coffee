@@ -6,6 +6,6 @@ module.exports = (grunt) ->
   options:
     'max_line_length':
       'level': 'ignore'
-  app: [
+  dev: [
     '<%= grunt.settings.paths.basePath %>/{modules,tests}/**/*.coffee'
   ]

@@ -25,8 +25,8 @@ module.exports = (grunt) ->
       # 'coverage'
     ]
 
-    preprocessors:
-      '<%= grunt.settings.paths.tempDir %>/scripts/**/*.js': ['coverage']
+    # preprocessors:
+    #   '<%= grunt.settings.paths.tempDir %>/scripts/**/*.js': ['coverage']
 
     coverageReporter:
       type: 'html'

@@ -6,29 +6,28 @@ module.exports = (grunt) ->
   options:
     spawn: false
     cwd: '<%= grunt.settings.paths.basePath %>'
-    livereload: grunt.settings.server.livereload  
-
-  # folders: 
-  #   files: ['modules/{,*/}/']
-  #   tasks: []
+    livereload: grunt.settings.server.livereload
 
   coffee:
     files: [
       'modules/{,*/}/'
       'modules/**/*.coffee'
+      'main.coffee'
     ]
     tasks: if grunt.settings.project.linting then ['coffeelint', 'coffee:dev'] else ['coffee:dev']
 
   sass:
     files: [
-      'modules/{,*/}*.{scss,sass}'
+      'modules/{,*/}/'
+      'modules/**/*.{scss,sass}'
       'main.{scss,sass}'
     ],
     tasks: ['sass:dev']
 
   assets:
     files: [
-      'pages/{,*/}*.html'
+      'pages/{,*/}/'
+      'pages/**/*.html'
       'index.html'
     ]
     tasks: ['includereplace']
