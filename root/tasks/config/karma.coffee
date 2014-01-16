@@ -6,11 +6,11 @@ module.exports = (grunt) ->
   options:
     files: [
       '<%= grunt.settings.paths.tempDir %>/common.js'
-      '<%= grunt.settings.paths.tempDir %>/common/test/runner.js'
+      '<%= grunt.settings.paths.tempDir %>/tests/unit/runner.js'
       {pattern: '<%= grunt.settings.paths.tempDir %>/**/*.{js,tmpl,json,html}', included: false}
     ]
     exclude: [
-      '<%= grunt.settings.paths.tempDir %>/test/**/*'
+      '<%= grunt.settings.paths.tempDir %>/vendor/**/*'
     ]
 
     frameworks: [
@@ -22,7 +22,7 @@ module.exports = (grunt) ->
 
     reporters: [
       'progress'
-      'coverage'
+      # 'coverage'
     ]
 
     preprocessors:

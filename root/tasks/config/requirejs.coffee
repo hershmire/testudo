@@ -24,7 +24,7 @@ module.exports = (grunt) ->
       # appDir: '<%= grunt.settings.paths.tempDir %>'
       baseUrl: '<%= grunt.settings.paths.tempDir %>'
       mainConfigFile: "<%= grunt.settings.paths.tempDir %>/common.js"
-      fileExclusionRegExp: new RegExp("modules/.*/[0-9A-Za-z]*Spec.js")
+      fileExclusionRegExp: new RegExp("tests/*")
       dir: "<%= grunt.settings.paths.buildDir %>"
       skipDirOptimize: true
       optimizeCss: 'none'

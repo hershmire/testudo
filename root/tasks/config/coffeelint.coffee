@@ -7,5 +7,5 @@ module.exports = (grunt) ->
     'max_line_length':
       'level': 'ignore'
   app: [
-    '<%= grunt.settings.paths.basePath %>/**/*.coffee'
+    '<%= grunt.settings.paths.basePath %>/{modules,tests}/**/*.coffee'
   ]
