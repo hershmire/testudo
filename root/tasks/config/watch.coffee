@@ -3,16 +3,19 @@
 # https://github.com/gruntjs/grunt-contrib-watch
 #
 module.exports = (grunt) ->
-  options :
+  options:
     spawn: false
     cwd: '<%= grunt.settings.paths.basePath %>'
-    livereload: grunt.settings.server.livereload
+    livereload: grunt.settings.server.livereload  
+
+  # folders: 
+  #   files: ['modules/{,*/}/']
+  #   tasks: []
 
   coffee:
     files: [
-      '{modules,tests}/**/*.coffee'
-      'common.coffee'
-      'main.coffee'
+      'modules/{,*/}/'
+      'modules/**/*.coffee'
     ]
     tasks: if grunt.settings.project.linting then ['coffeelint', 'coffee:dev'] else ['coffee:dev']
 
